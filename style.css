@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #191e2b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  margin: 10px;
+  letter-spacing: -1px;
+}
+
+.tituloppal {
+  font-size: 25px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #30343f;
+}
+
+.botones-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.boton {
+  background-color: transparent;
+  height: 36px;
+  border: none;
+  color: white;
+  padding: 0px 10px;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  outline: 0;
+}
+
+/* INICIO SECCION EDITOR DE MEME */
+
+.contenedor-ppal-editor {
+  display: flex;
+
+  justify-content: center;
+  width: 100vw;
+}
+
+.contenedor-editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  margin-top: 150px;
+}
+
+.contenedor-meme {
+  background-color: black;
+  width: 90%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+.caja-text-ppal {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 50px;
+  font-size: 20px;
+  background-color: white;
+  font-family: Impact;
+}
+
+.contenedor-img {
+  height: 300px;
+}
+
+.caja-text-abajo {
+  background-color: white;
+  padding: 10px 50px;
+  display: flex;
+}
