@@ -18,7 +18,7 @@
   <body>
     <!-- INICIO HEADER -->
     <header>
-      <h1 class="tituloppal">Generador de Memes</h1>
+      <!-- <h1 class="tituloppal">Generador de Memes</h1>
       <div class="botones-contenedor">
         <button class="boton" id="boton-imagen">
           <i class="fa-regular fa-image"></i> Imagen
@@ -27,24 +27,32 @@
         <button class="boton">
           <i class="far fa-lightbulb"></i>Modo Oscuro
         </button>
-      </div>
+      </div> -->
     </header>
     <!-- FIN HEADER -->
 
     <!-- INICIO SECCION EDITOR DE MEME -->
 
     <main class="contenedor-ppal-editor">
-      <div class="contenedor-editor">
+      <!-- <div class="contenedor-editor">
         <div class="contenedor-meme">
-          <div class="caja-text-ppal">
-            <p>TOP TEXT</p>
+          <div class="caja-text-meme caja-text-ppal">
+            <p class="texto-top">TOP TEXT</p>
           </div>
           <div class="contenedor-img"></div>
-          <div class="caja-text-abajo"><p>BOTTOM TEXT</p></div>
-          <button></button>
+          <div class="caja-text-meme caja-text-abajo">
+            <p>BOTTOM TEXT</p>
+          </div>
+          <button class="boton-descargar">
+            <i class="fas fa-download icono-descargar"></i>Descargar meme
+          </button>
         </div>
         <aside></aside>
-      </div>
+      </div> -->
+      <aside class="panel-editor">
+        <button class="boton-cerrar-panel"><i class="fas fa-times"></i></button>
+        <section class="panel-editor"></section>
+      </aside>
     </main>
   </body>
 </html>
