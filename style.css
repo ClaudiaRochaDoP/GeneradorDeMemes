@@ -266,3 +266,12 @@ body {
   font-size: 12px;
   margin-bottom: 10px;
 }
+
+input[type="range"] {
+  width: 100%;
+  background-color: #5a5d68;
+  border-radius: 10px;
+  appearance: none;
+  height: 6px;
+  margin-top: 10px;
+}
