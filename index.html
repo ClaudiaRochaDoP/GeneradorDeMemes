@@ -49,9 +49,114 @@
         </div>
         <aside></aside>
       </div> -->
-      <aside class="panel-editor">
+      <aside class="panel-aside">
         <button class="boton-cerrar-panel"><i class="fas fa-times"></i></button>
-        <section class="panel-editor"></section>
+        <section class="panel-editor">
+          <h2 class="titulo-editor">IMAGEN</h2>
+          <!-- IMG PANEL - INPUT URL -->
+          <div class="panel-fondo">
+            <h3 class="titulo-ajuste">URL</h3>
+            <input class="input-ajuste-url" />
+          </div>
+          <!-- FONDO -->
+          <div class="ajustes-panel">
+            <h3 class="titulo-ajuste">FONDO</h3>
+            <div class="color-modofusion">
+              <div class="panel-control-color">
+                <label class="input-color" for="color-fondo"></label>
+                <input id="" aria-label="" type="color" value="#FFFFFF" />
+                <!-- <span class="color-texto-fondo"></span> -->
+              </div>
+
+              <div class="panel-control-blend">
+                <select
+                  id="select-background"
+                  name="background-choices"
+                  class="select-modo"
+                  aria-label="Modo de mezcla de fondo de imagen"
+                >
+                  <option value="unset">Ninguno</option>
+                  <option value="lighten">Aclarar</option>
+                  <option value="darken">Oscurecer</option>
+                  <option value="difference">Diferencia</option>
+                  <option value="luminosity">Luminosidad</option>
+                  <option value="multiply">Multiplicar</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- Filtros -->
+          <div class="panel-control">
+            <h3 class="titulo-ajuste">FILTROS</h3>
+            <div class="panel-control-slider">
+              <label class="titulo-categoria" brightness-slider">BRILLO</label>
+              <input
+                id="brightness-slider"
+                type="range"
+                min="0"
+                max="1"
+                value="1"
+                step="0.1"
+              />
+            </div>
+            <div class="panel-control-slider">
+              <label class="titulo-categoria" for="opacity-slider">OPACIDAD</label>
+              <input
+                id="opacity-slider"
+                type="range"
+                min="0"
+                max="1"
+                value="1"
+                step="0.1"
+              />
+            </div>
+            <div class="panel-control-slider">
+              <label for="brightness-slider">BRILLO</label>
+              <input
+                id="brightness-slider"
+                type="range"
+                min="0"
+                max="1"
+                value="1"
+                step="0.1"
+              />
+            </div>
+            <div class="panel-control-slider">
+              <label for="brightness-slider">BRILLO</label>
+              <input
+                id="brightness-slider"
+                type="range"
+                min="0"
+                max="1"
+                value="1"
+                step="0.1"
+              />
+            </div>
+            <div class="panel-control-slider">
+              <label for="brightness-slider">BRILLO</label>
+              <input
+                id="brightness-slider"
+                type="range"
+                min="0"
+                max="1"
+                value="1"
+                step="0.1"
+              />
+            </div>
+            <var
+              ><div class="panel-control-slider">
+                <label for="brightness-slider">BRILLO</label>
+                <input
+                  id="brightness-slider"
+                  type="range"
+                  min="0"
+                  max="1"
+                  value="1"
+                  step="0.1"
+                /></div
+            ></var>
+          </div>
+        </section>
       </aside>
     </main>
   </body>

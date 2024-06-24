@@ -55,8 +55,16 @@ body {
 
 .contenedor-ppal-editor {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
   width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
 .contenedor-editor {
@@ -119,29 +127,142 @@ body {
 
 /* SECCION ASIDE */
 
-.panel-editor {
+.panel-aside {
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   background-color: #252935;
+  padding: 15px;
+  padding-top: 25px;
 }
 .boton-cerrar-panel {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+  background-color: transparent;
+  color: white;
+  outline: 0;
+  text-decoration: none;
+  border: none;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
-/* .panel {
-  width: 260px;
-  height: 100%;
+.panel-editor {
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  background-color: var(--color-panel);
-  padding: 30px 15px;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-  right: 0;
-  box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
-  z-index: 10 */
+  width: 100%;
+}
+
+.titulo-editor {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*---- IMG PANEL - INPUT URL ----*/
+
+.panel-fondo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.titulo-ajuste {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.input-ajuste-url {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  width: 100%;
+  height: 36px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border: 0;
+  outline: 0;
+  background-color: #333843;
+  border-radius: 3px;
+}
+
+/*---- FONDO ----*/
+
+.ajustes-panel {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.color-modofusion {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  align-items: center;
+}
+
+.panel-control-color {
+  display: flex;
+
+  width: 100%;
+  margin-right: 10px;
+}
+
+.panel-control-color > input[type="color"] {
+  display: flex;
+  width: 100%;
+  height: 36px;
+  border-radius: 5px;
+  border: 0;
+  background-color: transparent;
+}
+
+.panel-control-blend {
+  width: 50%;
+}
+
+.select-modo {
+  border: 0;
+  border-radius: 4px;
+  height: 33px;
+  width: 100%;
+  padding: 3px 5px;
+  background-color: #393e49;
+  color: white;
+  outline: 0;
+}
+
+/* FILTROS */
+
+.panel-control {
+  margin-bottom: 20px;
+}
+
+.panel-control-slider {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-categoria {
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
