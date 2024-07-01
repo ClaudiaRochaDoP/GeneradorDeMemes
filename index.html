@@ -17,8 +17,8 @@
   </head>
   <body>
     <!-- INICIO HEADER -->
-    <header>
-      <!-- <h1 class="tituloppal">Generador de Memes</h1>
+    <header class="">
+      <h1 class="tituloppal">Generador de Memes</h1>
       <div class="botones-contenedor">
         <button class="boton" id="boton-imagen">
           <i class="fa-regular fa-image"></i> Imagen
@@ -27,14 +27,14 @@
         <button class="boton">
           <i class="far fa-lightbulb"></i>Modo Oscuro
         </button>
-      </div> -->
+      </div>
     </header>
     <!-- FIN HEADER -->
 
     <!-- INICIO SECCION EDITOR DE MEME -->
 
     <main class="contenedor-ppal-editor">
-      <!-- <div class="contenedor-editor">
+      <section class="contenedor-editor">
         <div class="contenedor-meme">
           <div class="caja-text-meme caja-text-ppal">
             <p class="texto-top">TOP TEXT</p>
@@ -47,11 +47,13 @@
             <i class="fas fa-download icono-descargar"></i>Descargar meme
           </button>
         </div>
-        <aside></aside>
-      </div> -->
-      <aside class="panel-aside">
+      
+       
+      </section>
+      <aside class="panel-aside oculto">
         <button class="boton-cerrar-panel"><i class="fas fa-times"></i></button>
-        <section class="panel-editor">
+        <section class="panel-editor oculto">
+          
           <h2 class="titulo-editor">IMAGEN</h2>
           <!-- IMG PANEL - INPUT URL -->
           <div class="panel-fondo">
@@ -111,9 +113,9 @@
               />
             </div>
             <div class="panel-control-slider">
-              <label for="brightness-slider">BRILLO</label>
+              <label class="titulo-categoria" for="contrast-slider">CONTRASTE</label>
               <input
-                id="brightness-slider"
+                id="contrast-slider"
                 type="range"
                 min="0"
                 max="1"
@@ -122,9 +124,9 @@
               />
             </div>
             <div class="panel-control-slider">
-              <label for="brightness-slider">BRILLO</label>
+              <label class="titulo-categoria" for="blur-slider">DESENFOQUE</label>
               <input
-                id="brightness-slider"
+                id="blur-slider"
                 type="range"
                 min="0"
                 max="1"
@@ -133,9 +135,9 @@
               />
             </div>
             <div class="panel-control-slider">
-              <label for="brightness-slider">BRILLO</label>
+              <label class="titulo-categoria" for="grayscale-slider">ESCALA DE GRISES</label>
               <input
-                id="brightness-slider"
+                id="grayscale-slider"
                 type="range"
                 min="0"
                 max="1"
@@ -143,21 +145,162 @@
                 step="0.1"
               />
             </div>
-            <var
-              ><div class="panel-control-slider">
-                <label for="brightness-slider">BRILLO</label>
+            
+              <div class="panel-control-slider">
+                <label class="titulo-categoria" for="sepia-slider">SEPIA</label>
                 <input
-                  id="brightness-slider"
+                  id="sepia-slider"
                   type="range"
                   min="0"
                   max="1"
                   value="1"
                   step="0.1"
                 /></div
-            ></var>
+            >
+            <div class="panel-control-slider">
+              <label class="titulo-categoria" for="hue-slider">HUE</label>
+              <input
+                id="hue-slider"
+                type="range"
+                min="0"
+                max="1"
+                value="1"
+                step="0.1"
+              />
+            </div>
+            <div class="panel-control-slider">
+              <label class="titulo-categoria" for="saturation-slider">SATURATION</label>
+              <input
+              id="saturation-slider"
+              type="range"
+              min="0"
+              max="1"
+              value="1"
+              step="0.1"
+              /></div
+             >
+            <div class="panel-control-slider">
+              <label class="titulo-categoria" for="invert-slider">NEGATIVO</label>
+              <input
+            id="invert-slider"
+            type="range"
+            min="0"
+            max="1"
+            value="1"
+            step="0.1"
+              /></div
+          >
+          
+          <button class="boton-restablecer-filtros" type="button">Restablecer Filtros</button>
+          
+        </section>
+        <!-- SECCION TEXTO -->
+        <section class="oculto">
+          <div class="panel-editor">
+            <h2 class="titulo-editor">TEXTO</h2>
+            <div class="check-box1">
+              <h3 class="titulo-ajuste">SUPERIOR</h3>
+              <textarea  class="area-texto" id="" aria-label="Texto Top">TOP TEXT</textarea>
+              <div class="checkbox-style">
+                <input type="checkbox" id="checkbox"/>
+                <label for="checkbox">Sin texto superior</label>
+              </div>
+            </div>
+            <div class="panel-editor-dos">
+              <h3 class="titulo-ajuste">INFERIOR</h3>
+              <textarea  class="area-texto" id="" aria-label="Texto Bottom">BOTTOM TEXT</textarea>
+              <div class="checkbox-style">
+                <input type="checkbox" id="checkbox"/>
+                <label for="checkbox">Sin texto superior</label>
+              </div>
+
+            </div>
+            <div class="panel-editor-dos">
+              <h3 class="titulo-ajuste">FUENTE</h3>
+
+              <select class="select-style" name="cars" id="cars">
+                <option value="Arial">Arial</option>
+                <option value="Arial-black">Arial-black</option>
+                <option value="American Typewriter">American Typewriter</option>
+                <option value="Andale Mono">Andale Mono</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Impact">Impact</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+              </select>
+              <div class="contenedor-ajustes-fuente">
+                <input type="number" name="font size" aria-label="font size" class="input-font-size" id="" min="12" value="40">
+                <div class="container-botones alineacion-botones">
+                  <button class="boton-fuente"><i class="fas fa-align-left"></i></button>
+                  <button class="boton-fuente"><i class="fas fa-align-center"></i></button>
+                  <button class="boton-fuente"><i class="fas fa-align-right"></i></button>
+                </div>
+
+              </div> 
+
+            </div>
+
           </div>
+          <div class="container-color">
+          <div class="panel-ajustes-color">
+              <!-- Color de texto-->
+            <div class="contenedor-color-texto">
+              <h3 class="titulo-ajuste">COLOR</h3>
+              <label for="color-input-text">
+                <input type="color" id="color-input-text" class="color-input-font" name="color-input-text" value="#000000"> 
+                <span class="color-hex" id="" >#000000</span>
+              </label>  
+            </div>
+            <!-- Color de fondo-->
+            <div class="contenedor-color-fondo">
+              <h3 class="titulo-ajuste">FONDO</h3>
+              <label for="input-color-fondo">
+                <input type="color" id="input-color-fondo" class="color-input-fondo" name="input-color-fondo" value="#FFFFFF" >
+              </label>
+            </div>
+          </div>
+          <div class="checkbox-container-color">
+            <input type="checkbox">
+            <label class="checkbox-color-trasnsparente">Fondo Transparente</label>
+          </div>
+        </div>
+        <!--CONTORNO-->
+        <div class="container-contorno">
+          <h3 class="titulo-ajuste">CONTORNO</h3>
+          <div class="contenedor-botones-contorno">
+            <button class="boton-contorno">Ninguno</button>
+            <button class="boton-contorno">Claro</button>
+            <button class="boton-contorno">Oscuro</button>
+            
+          </div>
+
+        </div>
+         <!--ESPACIADO-->
+         <div class="conteiner-espaciado">
+          <h3 class="titulo-ajuste">ESPACIADO</h3>
+          <input type="number" class="input-espaciado" aria-label="Espaciado" min="10" max="50" value="35">
+         </div>
+         <!--INTERLINEADO-->
+         <div class="contenedor-interlineado">
+          <h3 class="titulo-ajuste">INTERLINEADO</h3>
+          <select class="interlineado-select">
+            <option value="0.8">0.8</option>
+            <option value="1">1</option>
+            <option value="1.2" selected="">1.2</option>
+            <option value="1.5">1.5</option>
+            <option value="2.0">2.0</option>
+            <option value="2.5">2.5</option>
+          </select>
+         </div>
+
+        </section>
+        <section>
+
         </section>
       </aside>
     </main>
   </body>
 </html>
+

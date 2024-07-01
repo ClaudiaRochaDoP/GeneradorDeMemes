@@ -51,11 +51,16 @@ body {
   outline: 0;
 }
 
+/* .oculto {
+  display: none;
+} */
+
 /* INICIO SECCION EDITOR DE MEME */
 
 .contenedor-ppal-editor {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
@@ -132,7 +137,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   background-color: #252935;
   padding: 15px;
   padding-top: 25px;
@@ -219,7 +223,6 @@ body {
 
 .panel-control-color {
   display: flex;
-
   width: 100%;
   margin-right: 10px;
 }
@@ -274,4 +277,261 @@ input[type="range"] {
   appearance: none;
   height: 6px;
   margin-top: 10px;
+}
+
+.boton-restablecer-filtros {
+  width: 45%;
+  height: 36px;
+  margin-top: 20px;
+  color: white;
+  background-color: #393e49;
+  border: none;
+  font-size: 14px;
+  padding: 0px 10px;
+  outline: 0;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* PANEL TEXTO */
+
+.area-texto {
+  width: 100%;
+  height: 36px;
+  border-radius: 3px;
+  border: none;
+  background-color: #393e49;
+}
+
+textarea {
+  color: white;
+  font-size: 19px;
+  font-weight: lighter;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.checkbox-style {
+  color: white;
+  font-weight: 300;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.panel-editor-dos {
+  margin-top: 20px;
+}
+
+.select-style {
+  width: 100%;
+  height: 33px;
+  background-color: #393e49;
+  border: 0;
+  color: white;
+  border-radius: 4px;
+  padding: 5px 8px;
+}
+.contenedor-ajustes-fuente {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-botones {
+  display: flex;
+  width: 50%;
+}
+
+.input-font-size {
+  margin-top: 5px;
+  border-radius: 4px;
+  background-color: #393e49;
+  width: 50%;
+  height: 36px;
+  border: 0px;
+  color: white;
+  padding: 5px 10px;
+}
+
+.boton-fuente {
+  height: 36px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #393e49;
+  color: white;
+  margin-top: 5px;
+  border: 0;
+  margin-left: 4px;
+}
+
+.alineacion-botones {
+  width: calc(50% - 2.5px);
+  justify-content: space-between;
+}
+
+.panel-ajustes-color {
+  display: flex;
+}
+
+.color-hex {
+  color: white;
+}
+
+.container-color {
+  display: flex;
+}
+
+.panel-ajustes-color {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.contenedor-color-texto {
+  width: 50%;
+}
+
+.color-input-text {
+  height: 36px;
+}
+
+.color-input-font {
+  height: 30px;
+  width: 90%;
+  border: 0;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.color-hex {
+  position: absolute;
+  left: 35px;
+  top: 54%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
+.contenedor-color-fondo {
+  width: 50%;
+}
+
+.color-input-fondo {
+  width: 100%;
+  height: 30px;
+  border: 0;
+  border-radius: 3px;
+  outline: none;
+}
+
+.container-color {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-container-color {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.input[type="checkbox"] {
+  border: 0;
+  background-color: transparent;
+  outline: 0;
+}
+
+.checkbox-color-trasnsparente {
+  color: white;
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+  font-size: 12px;
+  margin-left: 2px;
+}
+
+/* CONTORNO */
+
+.container-contorno {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.contenedor-botones-contorno {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.boton-contorno {
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #393e49;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  font-size: 14px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+/* ESPACIADO */
+
+.conteiner-espaciado {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.input-espaciado {
+  width: 100%;
+  height: 36px;
+  background-color: #393e49;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+/* ESPACIADO */
+
+.contenedor-interlineado {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.interlineado-select {
+  height: 36px;
+  background-color: #393e49;
+  color: white;
+  font-size: 14px;
+  border: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+}
+
+.oculto {
+  display: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) and (max-width: 1024px) {
 }
