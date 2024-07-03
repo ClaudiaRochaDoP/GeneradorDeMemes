@@ -26,7 +26,7 @@ h1 {
 body {
   font-family: "Montserrat", sans-serif;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   background-color: #30343f;
@@ -49,11 +49,8 @@ body {
   text-decoration: none;
   font-size: 14px;
   outline: 0;
+  cursor: pointer;
 }
-
-/* .oculto {
-  display: none;
-} */
 
 /* INICIO SECCION EDITOR DE MEME */
 
@@ -62,14 +59,13 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  background-color: #30343f;
   width: 100vw;
   height: 100vh;
   overflow: auto;
-  position: fixed;
   top: 0;
   right: 0;
   box-shadow: -10px 10px 100px 5px rgba(0, 0, 0, 0.3);
-  z-index: 10;
 }
 
 .contenedor-editor {
@@ -95,7 +91,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 10px 50px;
+  padding: 20px 50px;
   font-size: 20px;
   background-color: white;
   font-family: Impact;
@@ -103,7 +99,7 @@ body {
 
 .texto-top {
   color: black;
-  font-size: 20px;
+  font-size: 40px;
 }
 
 .contenedor-img {
@@ -136,10 +132,16 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: scroll;
+
   background-color: #252935;
   padding: 15px;
   padding-top: 25px;
+  justify-content: flex-end;
 }
 .boton-cerrar-panel {
   display: flex;
@@ -383,6 +385,11 @@ textarea {
 
 .color-hex {
   color: white;
+  /* position: absolute; */
+  left: 35px;
+  top: 54%;
+  transform: translateY(-50%);
+  font-size: 14px;
 }
 
 .container-color {
@@ -412,14 +419,11 @@ textarea {
   border: 0;
   padding: 0;
   border-radius: 5px;
+  color: white;
 }
 
-.color-hex {
-  position: absolute;
-  left: 35px;
-  top: 54%;
-  transform: translateY(-50%);
-  font-size: 14px;
+.color-input-font value {
+  color: white;
 }
 
 .contenedor-color-fondo {
@@ -533,5 +537,45 @@ textarea {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 700px) and (max-width: 850px) {
+  .contenedor-meme {
+    max-width: 80%;
+    height: 500px;
+  }
+  .contenedor-img {
+    height: 420px;
+  }
+
+  /* ASIDE */
+}
+
+@media (min-width: 851px) and (max-width: 3456px) {
+  .contenedor-ppal-editor {
+    display: flex;
+    flex-direction: row;
+    overflow: none;
+
+    width: 100vw;
+  }
+  .contenedor-editor {
+    width: 100%;
+    height: 100vh;
+    margin-top: 400px;
+  }
+
+  .contenedor-meme {
+    width: 40%;
+    height: 500px;
+  }
+  .contenedor-img {
+    height: 420px;
+  }
+  .panel-aside {
+    display: block;
+    visibility: visible;
+    width: 20%;
+  }
+  .boton-cerrar-panel {
+    display: none;
+  }
 }
