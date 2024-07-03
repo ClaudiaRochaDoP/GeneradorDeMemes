@@ -6,10 +6,7 @@
     <title>Generador de Memes</title>
     <link rel="stylesheet" href="style.css" />
     <!--links fontawesome (crear kit) para botones imagen, texto y modo oscuro-->
-    <script
-      src="https://kit.fontawesome.com/33e038a340.js"
-      crossorigin="anonymous"
-    ></script>
+    
     <script
       src="https://kit.fontawesome.com/65a0fb1ca0.js"
       crossorigin="anonymous"
@@ -17,14 +14,14 @@
   </head>
   <body>
     <!-- INICIO HEADER -->
-    <header class="">
-      <h1 class="tituloppal">Generador de Memes</h1>
+    <header class="modo-oscuro">
+      <h1 class="tituloppal modo-oscuro">Generador de Memes</h1>
       <div class="botones-contenedor">
-        <button class="boton" id="boton-imagen">
+        <button class="boton modo-oscuro" id="boton-imagen">
           <i class="fa-regular fa-image"></i> Imagen
         </button>
-        <button class="boton" id="boton-texto"><i class="fas fa-font"></i>Texto</button>
-        <button class="boton" id="boton-modo-oscuro">
+        <button class="boton modo-oscuro" id="boton-texto"><i class="fas fa-font"></i>Texto</button>
+        <button class="boton modo-oscuro" id="boton-modo-oscuro">
           <i class="far fa-lightbulb"></i>Modo Oscuro
         </button>
       </div>
@@ -33,13 +30,13 @@
 
     <!-- INICIO SECCION EDITOR DE MEME -->
 
-    <main class="contenedor-ppal-editor">
+    <main class="contenedor-ppal-editor modo-oscuro">
       <section class="contenedor-editor">
         <div class="contenedor-meme">
           <div class="caja-text-meme caja-text-ppal">
             <p class="texto-top">TOP TEXT</p>
           </div>
-          <div class="contenedor-img"></div>
+          <div class="imagen-src"><img alt="Imagen para editar el meme" id="img-meme" class="imagen-fondo"></div>
           <div class="caja-text-meme caja-text-abajo">
             <p class="texto-top">BOTTOM TEXT</p>
           </div>
@@ -51,20 +48,20 @@
        
       </section>
       
-      <aside id="" class="panel-aside">
+      <aside id="" class="panel-aside modo-oscuro">
         <!-- BOTON CERRAR ASIDE -->
-       <button class="boton-cerrar-panel "><i class="fas fa-times"></i></button>
+       <button class="boton-cerrar-panel"><i class="fas fa-times"></i></button>
        <section id="seccion-imagen" class="panel-editor">
          
-         <h2 class="titulo-editor">IMAGEN</h2>
+         <h2 class="titulo-editor modo-oscuro">IMAGEN</h2>
          <!-- IMG PANEL - INPUT URL -->
          <div class="panel-fondo">
-           <h3 class="titulo-ajuste">URL</h3>
-           <input class="input-ajuste-url" />
+           <h3 class="titulo-ajuste modo-oscuro">URL</h3>
+           <input id="input-url" class="input-ajuste-url modo-oscuro" />
          </div>
          <!-- FONDO -->
          <div class="ajustes-panel">
-           <h3 class="titulo-ajuste">FONDO</h3>
+           <h3 class="titulo-ajuste modo-oscuro">FONDO</h3>
            <div class="color-modofusion">
              <div class="panel-control-color">
                <label class="input-color" for="color-fondo"></label>
@@ -76,7 +73,7 @@
                <select
                  id="select-background"
                  name="background-choices"
-                 class="select-modo"
+                 class="select-modo modo-oscuro"
                  aria-label="Modo de mezcla de fondo de imagen"
                >
                  <option value="unset">Ninguno</option>
@@ -91,9 +88,9 @@
          </div>
          <!-- Filtros -->
          <div class="panel-control">
-           <h3 class="titulo-ajuste">FILTROS</h3>
+           <h3 class="titulo-ajuste modo-oscuro">FILTROS</h3>
            <div class="panel-control-slider">
-             <label class="titulo-categoria" brightness-slider">BRILLO</label>
+             <label class="titulo-categoria modo-oscuro" brightness-slider">BRILLO</label>
              <input
                id="brightness-slider"
                type="range"
