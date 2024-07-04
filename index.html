@@ -12,17 +12,20 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="modo-oscuro" id="body">
     <!-- INICIO HEADER -->
-    <header class="modo-oscuro">
-      <h1 class="tituloppal modo-oscuro">Generador de Memes</h1>
+    <header class="">
+      <h1 class="tituloppal">Generador de Memes</h1>
       <div class="botones-contenedor">
-        <button class="boton modo-oscuro" id="boton-imagen">
+        <button class="boton " id="boton-imagen">
           <i class="fa-regular fa-image"></i> Imagen
         </button>
-        <button class="boton modo-oscuro" id="boton-texto"><i class="fas fa-font"></i>Texto</button>
-        <button class="boton modo-oscuro" id="boton-modo-oscuro">
+        <button class="boton " id="boton-texto"><i class="fas fa-font"></i>Texto</button>
+        <button class="boton hidden" id="boton-modo-oscuro">
           <i class="far fa-lightbulb"></i>Modo Oscuro
+        </button>
+        <button class="boton" id="boton-modo-claro">
+          <i class="far fa-lightbulb"></i>Modo Claro
         </button>
       </div>
     </header>
@@ -30,7 +33,7 @@
 
     <!-- INICIO SECCION EDITOR DE MEME -->
 
-    <main class="contenedor-ppal-editor modo-oscuro">
+    <main class="contenedor-ppal-editor">
       <section class="contenedor-editor">
         <div class="contenedor-meme">
           <div class="caja-text-meme caja-text-ppal">
@@ -48,20 +51,20 @@
        
       </section>
       
-      <aside id="" class="panel-aside modo-oscuro">
+      <aside id="" class="panel-aside">
         <!-- BOTON CERRAR ASIDE -->
        <button class="boton-cerrar-panel"><i class="fas fa-times"></i></button>
        <section id="seccion-imagen" class="panel-editor">
          
-         <h2 class="titulo-editor modo-oscuro">IMAGEN</h2>
+         <h2 class="titulo-editor">IMAGEN</h2>
          <!-- IMG PANEL - INPUT URL -->
          <div class="panel-fondo">
-           <h3 class="titulo-ajuste modo-oscuro">URL</h3>
-           <input id="input-url" class="input-ajuste-url modo-oscuro" />
+           <h3 class="titulo-ajuste">URL</h3>
+           <input id="input-url" class="input-ajuste-url" />
          </div>
          <!-- FONDO -->
          <div class="ajustes-panel">
-           <h3 class="titulo-ajuste modo-oscuro">FONDO</h3>
+           <h3 class="titulo-ajuste">FONDO</h3>
            <div class="color-modofusion">
              <div class="panel-control-color">
                <label class="input-color" for="color-fondo"></label>
@@ -73,7 +76,7 @@
                <select
                  id="select-background"
                  name="background-choices"
-                 class="select-modo modo-oscuro"
+                 class="select-modo"
                  aria-label="Modo de mezcla de fondo de imagen"
                >
                  <option value="unset">Ninguno</option>
@@ -88,9 +91,9 @@
          </div>
          <!-- Filtros -->
          <div class="panel-control">
-           <h3 class="titulo-ajuste modo-oscuro">FILTROS</h3>
+           <h3 class="titulo-ajuste ">FILTROS</h3>
            <div class="panel-control-slider">
-             <label class="titulo-categoria modo-oscuro" brightness-slider">BRILLO</label>
+             <label class="titulo-categoria " brightness-slider">BRILLO</label>
              <input
                id="brightness-slider"
                type="range"

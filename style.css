@@ -1,18 +1,71 @@
+/* :root {
+  --color-header: #191e2b;
+  --background-color: #30343f;
+  --background-color-boton: transparent;
+  --color-boton: white;
+  --color-texto: white;
+  --background-color-image-src: black;
+  --background-color-panel-aside: #252935;
+  --color-titulo-editor: white;
+  --color-titulo-ajuste: white;
+  --background-color-input-ajuste-url: #333843;
+  --background-color-select-modo: #393e49;
+  --background-color-rage: #5a5d68;
+} */
+
+.modo-oscuro {
+  --color-header: #191e2b;
+  --background-color: #30343f;
+  --background-color-boton: transparent;
+  --color-boton: white;
+  --color-texto: white;
+  --background-color-image-src: black;
+  --background-color-panel-aside: #252935;
+  --color-titulo-editor: white;
+  --color-titulo-ajuste: white;
+  --background-color-input-ajuste-url: #333843;
+  --background-color-select-modo: #393e49;
+  --background-color-rage: #5a5d68;
+}
+
+.modo-claro {
+  --color-header: #e0e0e0;
+  --background-color: #eeeeee;
+  --background-color-boton: transparent;
+  --color-boton: #424242;
+  --color-texto: #424242;
+  --background-color-image-src: black;
+  --background-color-panel-aside: #fafafa;
+  --color-titulo-editor: rgb(33 33 33 / 80%);
+  --color-titulo-ajuste: rgb(33 33 33 / 70%);
+  --background-color-input-ajuste-url: #bdbdbd;
+  --background-color-select-modo: #bdbdbd;
+  --background-color-rage: #424242;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+}
+
 header {
-  /* background-color: #191e2b; */
+  background-color: var(--color-header);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 h1 {
-  /* color: white; */
+  color: white;
   text-align: center;
   font-weight: 600;
   margin: 10px;
@@ -23,15 +76,6 @@ h1 {
   font-size: 25px;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  background-color: #30343f;
-}
-
 .botones-contenedor {
   display: flex;
   flex-wrap: wrap;
@@ -39,10 +83,10 @@ body {
 }
 
 .boton {
-  background-color: transparent;
+  background-color: var(--background-color-boton);
   height: 36px;
   border: none;
-  /* color: white; */
+  color: white;
   padding: 0px 10px;
   align-items: center;
   text-align: center;
@@ -52,112 +96,6 @@ body {
   cursor: pointer;
 }
 
-/* ---  Modo Oscuro - Modo Claro  -----*/
-
-/* .modo-oscuro */
-
-.modo-oscuro header {
-  background-color: #191e2b;
-}
-
-.modo-oscuro h1 {
-  color: white;
-}
-
-.modo-oscuro .contenedor-ppal-editor {
-  background-color: #30343f;
-}
-
-.modo-oscuro .boton {
-  color: white;
-}
-
-.modo-oscuro .panel-aside {
-  background-color: #252935;
-}
-
-.modo-oscuro .titulo-editor {
-  color: white;
-}
-
-.modo-oscuro .titulo-ajuste {
-  color: white;
-}
-
-.modo-oscuro .input-ajuste-url {
-  background-color: #333843;
-}
-
-.modo-oscuro .select-modo {
-  background-color: #393e49;
-  color: white;
-}
-
-.modo-oscuro .titulo-categoria {
-  color: white;
-}
-
-.modo-oscuro input[type="range"] {
-  background-color: #5a5d68;
-}
-
-.modo-oscuro .boton-restablecer-filtros {
-  color: white;
-  background-color: #393e49;
-}
-
-/* modo-claro */
-
-.modo-claro header {
-  background-color: #e0e0e0;
-}
-
-.modo-claro h1 {
-  color: black;
-}
-
-.modo-oscuro .contenedor-ppal-editor {
-  background-color: #eeeeee;
-}
-
-.modo-claro .boton {
-  color: black;
-}
-
-.modo-claro .panel-aside {
-  background-color: #fafafa;
-}
-
-.modo-claro .titulo-editor {
-  color: black;
-}
-
-.modo-claro .titulo-ajuste {
-  color: black;
-}
-
-.modo-claro .input-ajuste-url {
-  background-color: #e0e0e0;
-}
-
-.modo-claro .select-modo {
-  background-color: #bdbdbd;
-  color: black;
-}
-
-.modo-claro .titulo-categoria {
-  color: black;
-}
-
-.modo-claro input[type="range"] {
-  background-color: #5a5d68;
-}
-
-.modo-claro .boton-restablecer-filtros {
-  color: white;
-  background-color: #e0e0e0;
-}
-
 /* INICIO SECCION EDITOR DE MEME */
 
 .contenedor-ppal-editor {
@@ -165,7 +103,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  /* background-color: #30343f; */
+  background-color: var(--background-color);
   width: 100vw;
   height: 100vh;
   overflow: auto;
@@ -191,7 +129,7 @@ body {
 .imagen-src {
   height: 100%;
   overflow: hidden;
-  background-color: rgb(0, 0, 0);
+  background-color: var(--background-color-image-src);
 }
 
 .caja-text-meme {
@@ -244,8 +182,7 @@ body {
   top: 0;
   right: 0;
   overflow: scroll;
-
-  /* background-color: #252935; */
+  background-color: var(--background-color-panel-aside);
   padding: 15px;
   padding-top: 25px;
   justify-content: flex-end;
@@ -273,7 +210,7 @@ body {
 }
 
 .titulo-editor {
-  /* color: white; */
+  color: var(--color-titulo-editor);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -294,7 +231,7 @@ body {
 }
 
 .titulo-ajuste {
-  /* color: white; */
+  color: var(--color-titulo-ajuste);
   font-weight: bold;
   font-size: 12px;
   margin-bottom: 10px;
@@ -311,7 +248,7 @@ body {
   margin-bottom: 5px;
   border: 0;
   outline: 0;
-  /* background-color: #333843; */
+  background-color: var(--background-color-input-ajuste-url);
   border-radius: 3px;
 }
 
@@ -355,8 +292,8 @@ body {
   height: 33px;
   width: 100%;
   padding: 3px 5px;
-  /* background-color: #393e49;
-  color: white; */
+  background-color: var(--background-color-select-modo);
+  color: var(--color-texto);
   outline: 0;
 }
 
@@ -373,7 +310,7 @@ body {
 }
 
 .titulo-categoria {
-  /* color: white; */
+  color: white;
   font-weight: 400;
   font-size: 12px;
   margin-bottom: 10px;
@@ -381,7 +318,7 @@ body {
 
 input[type="range"] {
   width: 100%;
-  /* background-color: #5a5d68; */
+  background-color: var(--background-color-rage);
   border-radius: 10px;
   appearance: none;
   height: 6px;
@@ -392,8 +329,8 @@ input[type="range"] {
   width: 45%;
   height: 36px;
   margin-top: 20px;
-  /* color: white;
-  background-color: #393e49; */
+  color: var(--color-boton);
+  background-color: var(--background-color-select-modo);
   border: none;
   font-size: 14px;
   padding: 0px 10px;
@@ -411,7 +348,7 @@ input[type="range"] {
   height: 36px;
   border-radius: 3px;
   border: none;
-  background-color: #393e49;
+  background-color: var(--background-color-select-modo);
 }
 
 textarea {
@@ -636,6 +573,10 @@ textarea {
   border: 0;
   border-radius: 3px;
   padding: 0 10px;
+}
+
+.hidden {
+  display: none;
 }
 
 .oculto {

@@ -4,13 +4,19 @@
 
 const botonTexto = document.getElementById("boton-texto");
 const botonImagen = document.getElementById("boton-imagen");
-const botonModoOscuro = document.getElementById("boton-modo-oscuro");
+// const botonModoOscuro = document.getElementById("boton-modo-oscuro");
 const seccionTexto = document.getElementById("seccion-texto");
 const seccionImagen = document.getElementById("seccion-imagen");
 const claseOculto = document.querySelector(".oculto");
 const headerTag = document.getElementsByTagName("header");
+
+/*---  Elementos Modo Oscuro y Modo Claro  ---*/
+
 const modoOscuro = document.querySelector(".modo-oscuro");
 const modoClaro = document.querySelector(".modo-claro");
+const body = document.getElementById("body");
+const botonModoOscuro = document.getElementById("boton-modo-oscuro");
+const botonModoClaro = document.getElementById("boton-modo-claro");
 
 /*---  Elementos input URL  ---*/
 
@@ -18,8 +24,6 @@ const inputUrl = document.getElementById("input-url");
 const imagenMeme = document.getElementById("img-meme");
 
 /*---  Elementos Color  ---*/
-
-const 
 
 /* -----------------------  FUNCIONES ---------------------*/
 
@@ -35,15 +39,27 @@ botonImagen.addEventListener("click", function () {
   seccionImagen.style.display = "block";
 });
 
-botonModoOscuro.addEventListener("click", function () {
-  // modoOscuro.classList.toggle(".modo-claro");
-  // modoClaro.classList.toggle(".modo-oscuro");
-  // // modoOscuro.classList.replace(".modo-oscuro", ".modo-claro");
-  modoOscuro.classList.toggle("modo-claro");
-  modoOscuro.classList.toggle("modo-oscuro");
-});
+/* ----  Funciones Modo Oscuro y Modo Claro  ------ */
 
-/* ----  Funciones Formulario Imagen ------ */
+function modoClaroOn() {
+  body.classList.add("modo-claro");
+  body.classList.remove("modo-oscuro");
+  botonModoClaro.classList.add("hidden");
+  botonModoOscuro.classList.remove("hidden");
+}
+botonModoClaro.addEventListener("click", modoClaroOn);
+
+function modoOscuroOn() {
+  body.classList.remove("modo-claro");
+  body.classList.add("modo-oscuro");
+  botonModoClaro.classList.remove("hidden");
+  botonModoOscuro.classList.add("hidden");
+}
+botonModoOscuro.addEventListener("click", modoOscuroOn);
+
+/* ----  Funciones Formulario Imagen ------- */
+
+// Función Imagen - URL
 
 inputUrl.oninput = () => {
   imagenMeme.src = inputUrl.value;
