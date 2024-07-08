@@ -34,12 +34,14 @@
     <!-- INICIO SECCION EDITOR DE MEME -->
 
     <main class="contenedor-ppal-editor">
-      <section class="contenedor-editor">
-        <div class="contenedor-meme">
+      <section id="contenedor-editor" class="contenedor-editor">
+        <div id="contenedor-meme" class="contenedor-meme">
           <div class="caja-text-meme caja-text-ppal">
             <p class="texto-top">TOP TEXT</p>
           </div>
-          <div class="imagen-src"><img alt="Imagen para editar el meme" id="img-meme" class="imagen-fondo"></div>
+          <div id="contenedor-imagen" class="imagen-src">
+            <img  alt="Imagen para editar el meme" id="img-meme" class="meme-imagen">
+          </div>
           <div class="caja-text-meme caja-text-abajo">
             <p class="texto-top">BOTTOM TEXT</p>
           </div>
@@ -66,25 +68,25 @@
          <div class="ajustes-panel">
            <h3 class="titulo-ajuste">FONDO</h3>
            <div class="color-modofusion">
-             <div class="panel-control-color">
-               <label class="input-color" for="color-fondo"></label>
-               <input id="" aria-label="" type="color" value="#FFFFFF" />
-               <!-- <span class="color-texto-fondo"></span> -->
-             </div>
+             
+               
+               <input class="input-color-fondo" id="input-color-fondo" aria-label="" type="color" placeholder="#FFFFFF" />
+              
+             
   
              <div class="panel-control-blend">
                <select
-                 id="select-background"
+                 id="select-modo"
                  name="background-choices"
                  class="select-modo"
                  aria-label="Modo de mezcla de fondo de imagen"
                >
-                 <option value="unset">Ninguno</option>
-                 <option value="lighten">Aclarar</option>
-                 <option value="darken">Oscurecer</option>
-                 <option value="difference">Diferencia</option>
-                 <option value="luminosity">Luminosidad</option>
-                 <option value="multiply">Multiplicar</option>
+                 <option id="ninguno" value="ninguno">Ninguno</option>
+                 <option id="aclarar" value="aclarar">Aclarar</option>
+                 <option id="oscurecer" value="oscurecer">Oscurecer</option>
+                 <option id="diferencia" value="diferencia">Diferencia</option>
+                 <option id="luminosidad" value="luminosidad">Luminosidad</option>
+                 <option  id="multiplicart" value="multiplicar">Multiplicar</option>
                </select>
              </div>
            </div>

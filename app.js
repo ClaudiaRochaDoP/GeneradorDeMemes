@@ -4,7 +4,6 @@
 
 const botonTexto = document.getElementById("boton-texto");
 const botonImagen = document.getElementById("boton-imagen");
-// const botonModoOscuro = document.getElementById("boton-modo-oscuro");
 const seccionTexto = document.getElementById("seccion-texto");
 const seccionImagen = document.getElementById("seccion-imagen");
 const claseOculto = document.querySelector(".oculto");
@@ -64,3 +63,50 @@ botonModoOscuro.addEventListener("click", modoOscuroOn);
 inputUrl.oninput = () => {
   imagenMeme.src = inputUrl.value;
 };
+
+// funcion escoger color
+
+// Función seleccion color fondo
+
+const inputColorFondo = document.getElementById("input-color-fondo");
+const selectModo = document.getElementById("select-modo");
+const contenedorMeme = document.getElementById("contenedor-meme");
+const contenedorImagen = document.getElementById("contenedor-imagen");
+const contenedorEditor = document.getElementById("contenedor-editor");
+
+function seleccionFondo() {
+  contenedorMeme.style.backgroundColor = inputColorFondo.value;
+}
+
+inputColorFondo.addEventListener("click", seleccionFondo);
+
+selectModo.addEventListener("click", function () {
+  if (selectModo.value === "ninguno") {
+    contenedorMeme.style.backgroundBlendMode = "normal";
+  }
+  if (selectModo.value === "aclarar") {
+    contenedorMeme.style.backgroundBlendMode = "aclarar";
+  }
+  if (selectModo.value === "oscurecer") {
+    contenedorMeme.style.backgroundBlendMode = "oscurecer";
+  }
+  if (selectModo.value === "diferencia") {
+    contenedorMeme.style.backgroundBlendMode = "difference";
+  }
+  if (selectModo.value === "luminosidad") {
+    contenedorMeme.style.backgroundBlendMode = "luminosidad";
+  }
+  if (selectModo.value === "multiplicar") {
+    contenedorMeme.style.backgroundBlendMode = "multiplicar";
+  }
+});
+
+// inputColorFondo.addEventListener("input", () => {
+//   const inputColorValue = inputColorFondo.value;
+//   contenedorMeme.style.backgroundColor = inputColorValue;
+// });
+
+// selectModo.onchage = () => {
+//   const selectModoValue = selectModo.value;
+//   contenedorMeme.style.backgroundBlendMode = selectModoValue;
+// };
