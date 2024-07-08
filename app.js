@@ -17,11 +17,6 @@ const body = document.getElementById("body");
 const botonModoOscuro = document.getElementById("boton-modo-oscuro");
 const botonModoClaro = document.getElementById("boton-modo-claro");
 
-/*---  Elementos input URL  ---*/
-
-const inputUrl = document.getElementById("input-url");
-const imagenMeme = document.getElementById("img-meme");
-
 /*---  Elementos Color  ---*/
 
 /* -----------------------  FUNCIONES ---------------------*/
@@ -58,13 +53,16 @@ botonModoOscuro.addEventListener("click", modoOscuroOn);
 
 /* ----  Funciones Formulario Imagen ------- */
 
+/*---  Elementos input URL  ---*/
+
+const inputUrl = document.getElementById("input-url");
+const imagenMeme = document.getElementById("img-meme");
+
 // Función Imagen - URL
 
 inputUrl.oninput = () => {
   imagenMeme.src = inputUrl.value;
 };
-
-// funcion escoger color
 
 // Función seleccion color fondo
 
@@ -74,39 +72,66 @@ const contenedorMeme = document.getElementById("contenedor-meme");
 const contenedorImagen = document.getElementById("contenedor-imagen");
 const contenedorEditor = document.getElementById("contenedor-editor");
 
-function seleccionFondo() {
-  contenedorMeme.style.backgroundColor = inputColorFondo.value;
-}
+inputColorFondo.addEventListener("click", () => {
+  contenedorImagen.style.backgroundColor = inputColorFondo.value;
+});
 
-inputColorFondo.addEventListener("click", seleccionFondo);
-
-selectModo.addEventListener("click", function () {
+selectModo.addEventListener("click", () => {
   if (selectModo.value === "ninguno") {
-    contenedorMeme.style.backgroundBlendMode = "normal";
+    contenedorImagen.style.mixBlendMode = "normal";
   }
   if (selectModo.value === "aclarar") {
-    contenedorMeme.style.backgroundBlendMode = "aclarar";
+    contenedorImagen.style.mixBlendMode = "aclarar";
   }
-  if (selectModo.value === "oscurecer") {
-    contenedorMeme.style.backgroundBlendMode = "oscurecer";
+  if (selectModo.value === "ocurecer") {
+    contenedorImagen.style.mixBlendMode = "oscurecer";
   }
   if (selectModo.value === "diferencia") {
-    contenedorMeme.style.backgroundBlendMode = "difference";
+    contenedorImagen.style.mixBlendMode = "diferencia";
   }
   if (selectModo.value === "luminosidad") {
-    contenedorMeme.style.backgroundBlendMode = "luminosidad";
+    contenedorImagen.style.mixBlendMode = "luminosidad";
   }
   if (selectModo.value === "multiplicar") {
-    contenedorMeme.style.backgroundBlendMode = "multiplicar";
+    contenedorImagen.style.mixBlendMode = "multiplicar";
   }
 });
 
+// function seleccionFondo() {
+//   contenedorImagen.style.backgroundColor = inputColorFondo.value;
+// }
+
+// inputColorFondo.addEventListener("click", seleccionFondo);
+
+// selectModo.addEventListener("click", function () {
+//   if (selectModo.value === "ninguno") {
+//     contenedorImagen.style.backgroundBlendMode = "normal";
+//   }
+//   if (selectModo.value === "aclarar") {
+//     contenedorImagen.style.backgroundBlendMode = "aclarar";
+//   }
+//   if (selectModo.value === "oscurecer") {
+//     contenedorImagen.style.backgroundBlendMode = "oscurecer";
+//   }
+//   if (selectModo.value === "diferencia") {
+//     contenedorImagen.style.backgroundBlendMode = "difference";
+//   }
+//   if (selectModo.value === "luminosidad") {
+//     contenedorImagen.style.backgroundBlendMode = "luminosidad";
+//   }
+//   if (selectModo.value === "multiplicar") {
+//     contenedorImagen.style.backgroundBlendMode = "multiplicar";
+//   }
+// });
+
 // inputColorFondo.addEventListener("input", () => {
 //   const inputColorValue = inputColorFondo.value;
-//   contenedorMeme.style.backgroundColor = inputColorValue;
+//   contenedorImagen.style.backgroundColor = inputColorValue;
 // });
 
 // selectModo.onchage = () => {
 //   const selectModoValue = selectModo.value;
-//   contenedorMeme.style.backgroundBlendMode = selectModoValue;
+//   contenedorImagen.style.backgroundBlendMode = selectModoValue;
 // };
+
+/* ----  Funciones Filtros ------ */
