@@ -65,16 +65,20 @@ inputUrl.oninput = () => {
 
 // Función Seleccion Color y Modos de fusion
 
+const textoColorlabel = document.getElementById("fondo-color-label");
+
 const inputColorFondo = document.getElementById("input-color-fondo");
 const selectModo = document.getElementById("select-modo");
 const contenedorMeme = document.getElementById("contenedor-meme");
 const contenedorImagen = document.getElementById("contenedor-imagen");
 const contenedorEditor = document.getElementById("contenedor-editor");
 const colorModoFusion = document.getElementById("color-modofusion");
+const colorHex = document.getElementById("color-hex-fondo");
 
 inputColorFondo.addEventListener("input", function () {
   const seleColor = inputColorFondo.value;
   contenedorImagen.style.backgroundColor = seleColor;
+  colorHex.innerText = seleColor;
 });
 
 selectModo.addEventListener("change", function () {
@@ -165,3 +169,5 @@ botonRestablecerFiltros.addEventListener("click", function () {
   inputNegativo.value = 0;
   aplicarFiltros();
 });
+
+/*  ---------------- Textos ---------------*/

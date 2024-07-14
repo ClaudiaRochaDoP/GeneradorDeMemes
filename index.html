@@ -22,7 +22,7 @@
       <h1 class="tituloppal">Generador de Memes</h1>
       <div class="botones-contenedor">
         <button class="boton " id="boton-imagen">
-          <i class="fa-regular fa-image"></i> Imagen
+          <i class="fa fa-regular fa-file-image"></i> Imagen
         </button>
         <button class="boton " id="boton-texto"><i class="fas fa-font"></i>Texto</button>
         <button class="boton hidden" id="boton-modo-oscuro">
@@ -71,8 +71,11 @@
          <div class="ajustes-panel">
            <h3 class="titulo-ajuste">FONDO</h3>
            <div id="color-modofusion" class="color-modofusion">
-               <input class="input-color-fondo" id="input-color-fondo" aria-label="" type="color" value="" />
+            <div class="contenedor-color">
+               <input class="input-color-fondo" id="input-color-fondo" aria-label="" type="color" value="#FFFFFF" />
               
+              <label class="color-hex-fondo" id="color-hex-fondo">#FFFFFF</label>
+            </div>
              <div class="panel-control-blend">
                <select
                  id="select-modo"
