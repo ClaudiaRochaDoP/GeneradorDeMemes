@@ -17,8 +17,6 @@ const body = document.getElementById("body");
 const botonModoOscuro = document.getElementById("boton-modo-oscuro");
 const botonModoClaro = document.getElementById("boton-modo-claro");
 
-/*---  Elementos Color  ---*/
-
 /* -----------------------  FUNCIONES ---------------------*/
 
 /* ----  Funciones Botones Header ------ */
@@ -60,78 +58,110 @@ const imagenMeme = document.getElementById("img-meme");
 
 // Función Imagen - URL
 
+// forma 1
 inputUrl.oninput = () => {
   imagenMeme.src = inputUrl.value;
 };
 
-// Función seleccion color fondo
+// Función Seleccion Color y Modos de fusion
 
 const inputColorFondo = document.getElementById("input-color-fondo");
 const selectModo = document.getElementById("select-modo");
 const contenedorMeme = document.getElementById("contenedor-meme");
 const contenedorImagen = document.getElementById("contenedor-imagen");
 const contenedorEditor = document.getElementById("contenedor-editor");
+const colorModoFusion = document.getElementById("color-modofusion");
 
-inputColorFondo.addEventListener("click", () => {
-  contenedorImagen.style.backgroundColor = inputColorFondo.value;
+inputColorFondo.addEventListener("input", function () {
+  const seleColor = inputColorFondo.value;
+  contenedorImagen.style.backgroundColor = seleColor;
 });
 
-selectModo.addEventListener("click", () => {
-  if (selectModo.value === "ninguno") {
-    contenedorImagen.style.mixBlendMode = "normal";
-  }
-  if (selectModo.value === "aclarar") {
-    contenedorImagen.style.mixBlendMode = "aclarar";
-  }
-  if (selectModo.value === "ocurecer") {
-    contenedorImagen.style.mixBlendMode = "oscurecer";
-  }
-  if (selectModo.value === "diferencia") {
-    contenedorImagen.style.mixBlendMode = "diferencia";
-  }
-  if (selectModo.value === "luminosidad") {
-    contenedorImagen.style.mixBlendMode = "luminosidad";
-  }
-  if (selectModo.value === "multiplicar") {
-    contenedorImagen.style.mixBlendMode = "multiplicar";
+selectModo.addEventListener("change", function () {
+  const selected = selectModo.value;
+
+  if (selected === "aclarar") {
+    imagenMeme.style.mixBlendMode = "lighten";
+  } else if (selected === "oscurecer") {
+    imagenMeme.style.mixBlendMode = "darken";
+  } else if (selected === "diferencia") {
+    imagenMeme.style.mixBlendMode = "difference";
+  } else if (selected === "luminosidad") {
+    imagenMeme.style.mixBlendMode = "luminosity";
+  } else if (selected === "multiplicar") {
+    imagenMeme.style.mixBlendMode = "multiply";
+  } else if (selected === "ninguno") {
+    imagenMeme.style.mixBlendMode = "normal";
   }
 });
 
-// function seleccionFondo() {
-//   contenedorImagen.style.backgroundColor = inputColorFondo.value;
-// }
+/*  ---------------- Filtros---------------*/
 
-// inputColorFondo.addEventListener("click", seleccionFondo);
+/*  ---- Elementos ----*/
 
-// selectModo.addEventListener("click", function () {
-//   if (selectModo.value === "ninguno") {
-//     contenedorImagen.style.backgroundBlendMode = "normal";
-//   }
-//   if (selectModo.value === "aclarar") {
-//     contenedorImagen.style.backgroundBlendMode = "aclarar";
-//   }
-//   if (selectModo.value === "oscurecer") {
-//     contenedorImagen.style.backgroundBlendMode = "oscurecer";
-//   }
-//   if (selectModo.value === "diferencia") {
-//     contenedorImagen.style.backgroundBlendMode = "difference";
-//   }
-//   if (selectModo.value === "luminosidad") {
-//     contenedorImagen.style.backgroundBlendMode = "luminosidad";
-//   }
-//   if (selectModo.value === "multiplicar") {
-//     contenedorImagen.style.backgroundBlendMode = "multiplicar";
-//   }
-// });
+const inputBrillo = document.getElementById("brightness");
+const inputOpacidad = document.getElementById("opacity");
+const inputContraste = document.getElementById("contrast");
+const inputDesenfoque = document.getElementById("blur");
+const inputEscalaGrises = document.getElementById("grayscale");
+const inputSepia = document.getElementById("sepia");
+const inputHueRotation = document.getElementById("hue-rotation");
+const inputSaturation = document.getElementById("saturation");
+const inputNegativo = document.getElementById("invert");
 
-// inputColorFondo.addEventListener("input", () => {
-//   const inputColorValue = inputColorFondo.value;
-//   contenedorImagen.style.backgroundColor = inputColorValue;
-// });
+/*  ---- Funcion aplicar filtros ----*/
 
-// selectModo.onchage = () => {
-//   const selectModoValue = selectModo.value;
-//   contenedorImagen.style.backgroundBlendMode = selectModoValue;
-// };
+function aplicarFiltros() {
+  let brightness = inputBrillo.value;
+  let opacity = inputOpacidad.value;
+  let contrast = inputContraste.value;
+  let blur = inputDesenfoque.value;
+  let grayScale = inputEscalaGrises.value;
+  let sepia = inputSepia.value;
+  let hue = inputHueRotation.value;
+  let saturation = inputSaturation.value;
+  let invert = inputNegativo.value;
 
-/* ----  Funciones Filtros ------ */
+  imagenMeme.style.filter = `
+      brightness(${brightness})
+      opacity(${opacity})
+      contrast(${contrast}%)
+      blur(${blur}px)
+      grayscale(${grayScale}%)
+      sepia(${sepia}%)
+      hue-rotate(${hue}deg)
+      saturate(${saturation}%)
+      invert(${invert})
+  `;
+}
+
+inputBrillo.addEventListener("input", aplicarFiltros);
+inputOpacidad.addEventListener("input", aplicarFiltros);
+inputContraste.addEventListener("input", aplicarFiltros);
+inputDesenfoque.addEventListener("input", aplicarFiltros);
+inputEscalaGrises.addEventListener("input", aplicarFiltros);
+inputSepia.addEventListener("input", aplicarFiltros);
+inputHueRotation.addEventListener("input", aplicarFiltros);
+inputSaturation.addEventListener("input", aplicarFiltros);
+inputNegativo.addEventListener("input", aplicarFiltros);
+
+/*  ---- Funcion restablecer filtros ----*/
+
+/*  ---- Elementos ----*/
+
+const botonRestablecerFiltros = document.getElementById(
+  "boton-restablecer-filtros"
+);
+
+botonRestablecerFiltros.addEventListener("click", function () {
+  inputBrillo.value = 1;
+  inputOpacidad.value = 1;
+  inputContraste.value = 100;
+  inputDesenfoque.value = 0;
+  inputEscalaGrises.value = 0;
+  inputSepia.value = 0;
+  inputHueRotation.value = 0;
+  inputSaturation.value = 100;
+  inputNegativo.value = 0;
+  aplicarFiltros();
+});
