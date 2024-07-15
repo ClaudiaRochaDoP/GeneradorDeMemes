@@ -171,3 +171,44 @@ botonRestablecerFiltros.addEventListener("click", function () {
 });
 
 /*  ---------------- Textos ---------------*/
+
+// Editar texto de la parte superior
+
+const textoToptextarea = document.getElementById("texto-top-textarea");
+const h2TextoSupMeme = document.getElementById("h2-texto-superior");
+
+textoToptextarea.addEventListener("keyup", function () {
+  let textareaTopValue = textoToptextarea.value;
+  h2TextoSupMeme.innerText = textareaTopValue;
+});
+
+// Editar texto de la parte inferior
+
+const textoBottomtextarea = document.getElementById("texto-bottom-textarea");
+const h2TextoInfMeme = document.getElementById("h2-texto-inferior");
+
+textoBottomtextarea.addEventListener("keyup", function () {
+  let textareaBottomValue = textoBottomtextarea.value;
+  h2TextoInfMeme.innerText = textareaBottomValue;
+});
+
+// checkbox sin texto
+
+const sinTextoTop = document.getElementById("sin-Texto-Top");
+const sinTextoBottom = document.getElementById("sin-Texto-Bottom");
+
+sinTextoTop.oninput = () => {
+  if (sinTextoTop.checked) {
+    h2TextoSupMeme.style.display = "none";
+  } else {
+    h2TextoSupMeme.style.display = "flex";
+  }
+};
+
+sinTextoBottom.oninput = () => {
+  if (sinTextoBottom.checked) {
+    h2TextoInfMeme.style.display = "none";
+  } else {
+    h2TextoInfMeme.style.display = "flex";
+  }
+};
