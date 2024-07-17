@@ -232,3 +232,24 @@ inputFontSize.addEventListener("input", function () {
   h2TextoSupMeme.style.fontSize = `${fontSizeValue}px`;
   h2TextoInfMeme.style.fontSize = `${fontSizeValue}px`;
 });
+
+// Editar alineación de texto
+
+const alinearTextoIzq = document.getElementById("alinear-texto-izq");
+const alinearTextoCentro = document.getElementById("alinear-texto-centro");
+const alinearTextoDer = document.getElementById("alinear-texto-der");
+
+alinearTextoIzq.addEventListener("click", function () {
+  h2TextoSupMeme.style.justifyContent = "flex-start";
+  h2TextoInfMeme.style.justifyContent = "flex-start";
+});
+
+alinearTextoCentro.addEventListener("click", function () {
+  h2TextoSupMeme.style.justifyContent = "center";
+  h2TextoInfMeme.style.justifyContent = "center";
+});
+
+alinearTextoDer.addEventListener("click", function () {
+  h2TextoSupMeme.style.justifyContent = "flex-end";
+  h2TextoInfMeme.style.justifyContent = "flex-end";
+});

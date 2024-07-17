@@ -112,6 +112,7 @@ h1 {
   height: 100px;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: bold;
   font-size: 40px;
@@ -122,6 +123,7 @@ h1 {
   height: 100px;
   display: flex;
   align-items: center;
+  justify-content: center;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-weight: bold;
   font-size: 40px;
@@ -135,7 +137,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   background-color: #e9e7ef;
   box-sizing: border-box;
 }
