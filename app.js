@@ -253,3 +253,17 @@ alinearTextoDer.addEventListener("click", function () {
   h2TextoSupMeme.style.justifyContent = "flex-end";
   h2TextoInfMeme.style.justifyContent = "flex-end";
 });
+
+// Editar color de letra
+
+const colorLetra = document.getElementById("color-input-text");
+const colorHexLetra = document.getElementById("color-hex-letra");
+
+colorLetra.addEventListener("input", function () {
+  let valorColor = colorLetra.value;
+  h2TextoSupMeme.style.color = valorColor;
+  h2TextoInfMeme.style.color = valorColor;
+  colorHexLetra.innerText = valorColor;
+});
+
+// Editar fondo de Letra

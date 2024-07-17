@@ -206,18 +206,21 @@
          <div class="container-color">
           <div class="panel-ajustes-color">
              <!-- Color de texto-->
-           <div class="contenedor-color-texto">
+           <div class="contenedor-ppal-color-texto">
              <h3 class="titulo-ajuste">COLOR</h3>
-
-               <input type="color" id="color-input-text" class="color-input-font" name="color-input-text" value="#000000"> 
+              <div class="contenedor-color-texto">
+               <input type="color" id="color-input-text" class="color-input-font" name="color-input-text" value="#000000">
+               <label id="color-hex-letra" class="label-color-font" for="color-input-text" id="">#FFFFFF</label>
+              </div>
             
            </div>
            <!-- Color de fondo-->
            <div class="contenedor-color-fondo">
              <h3 class="titulo-ajuste">FONDO</h3>
-             <label for="input-color-fondo">
-               <input type="color" id="input-color-fondo" class="color-input-fondo" name="input-color-fondo" value="#FFFFFF" >
-             </label>
+             <div class="contenedor-color-fondo-texto">
+              <input type="color" id="color-input-fondo" class="color-input-fondo" value="#FFFFFF" aria-label="Color del fondo del texto" >
+               <label class="label-color-font-background" for="">#FFFFFF</label>
+              </div>
            </div>
          </div>
          <div class="checkbox-container-color">
