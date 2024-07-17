@@ -218,7 +218,17 @@ sinTextoBottom.oninput = () => {
 const selectFuente = document.getElementById("select-fuente");
 
 selectFuente.addEventListener("change", function () {
-  const fontValue = selectFuente.value;
+  let fontValue = selectFuente.value;
   h2TextoSupMeme.style.fontFamily = fontValue;
   h2TextoInfMeme.style.fontFamily = fontValue;
+});
+
+// Cambiar tamaño de la fuente
+
+const inputFontSize = document.getElementById("input-font-size");
+
+inputFontSize.addEventListener("input", function () {
+  let fontSizeValue = inputFontSize.value;
+  h2TextoSupMeme.style.fontSize = `${fontSizeValue}px`;
+  h2TextoInfMeme.style.fontSize = `${fontSizeValue}px`;
 });
