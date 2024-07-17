@@ -212,3 +212,13 @@ sinTextoBottom.oninput = () => {
     h2TextoInfMeme.style.display = "flex";
   }
 };
+
+// Seleccionar fuente
+
+const selectFuente = document.getElementById("select-fuente");
+
+selectFuente.addEventListener("change", function () {
+  const fontValue = selectFuente.value;
+  h2TextoSupMeme.style.fontFamily = fontValue;
+  h2TextoInfMeme.style.fontFamily = fontValue;
+});
