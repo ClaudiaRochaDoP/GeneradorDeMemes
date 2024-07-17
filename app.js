@@ -267,3 +267,12 @@ colorLetra.addEventListener("input", function () {
 });
 
 // Editar fondo de Letra
+
+const colorFondoLetra = document.getElementById("color-input-fondo-texto");
+const colorHexFondoLetra = document.getElementById("color-hex-fondo-letra");
+
+colorFondoLetra.addEventListener("input", function () {
+  let valorColorFondoLetra = colorFondoLetra.value;
+  contenedorMeme.style.backgroundColor = valorColorFondoLetra;
+  colorFondoLetra.innerText = valorColorFondoLetra;
+});
