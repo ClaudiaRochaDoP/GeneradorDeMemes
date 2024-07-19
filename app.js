@@ -273,6 +273,34 @@ const colorHexFondoLetra = document.getElementById("color-hex-fondo-letra");
 
 colorFondoLetra.addEventListener("input", function () {
   let valorColorFondoLetra = colorFondoLetra.value;
-  contenedorMeme.style.backgroundColor = valorColorFondoLetra;
+  h2TextoSupMeme.style.backgroundColor = valorColorFondoLetra;
+  h2TextoInfMeme.style.backgroundColor = valorColorFondoLetra;
   colorFondoLetra.innerText = valorColorFondoLetra;
+});
+
+// Editar a fondo transparente
+
+const fondoTransparente = document.getElementById("fondo-transparente");
+
+fondoTransparente.addEventListener("change", function () {
+  if (fondoTransparente.checked) {
+    h2TextoSupMeme.style.backgroundColor = "transparent";
+    h2TextoInfMeme.style.backgroundColor = "transparent";
+    h2TextoSupMeme.style.position = "absolute";
+    h2TextoInfMeme.style.position = "absolute";
+    h2TextoSupMeme.style.top = "130px";
+    h2TextoSupMeme.style.alignItems = "center";
+    h2TextoInfMeme.style.bottom = "250px";
+    h2TextoInfMeme.style.alignItems = "center";
+  } else {
+    contenedorMeme.style.backgroundColor = "white";
+    h2TextoSupMeme.style.backgroundColor = "colorFondoLetra";
+    h2TextoInfMeme.style.backgroundColor = "colorFondoLetra";
+    h2TextoSupMeme.style.position = "";
+    h2TextoInfMeme.style.position = "";
+    h2TextoSupMeme.style.top = "";
+    h2TextoInfMeme.style.bottom = "";
+    h2TextoSupMeme.style.alignItems = "";
+    h2TextoInfMeme.style.alignItems = "";
+  }
 });
