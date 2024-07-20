@@ -304,3 +304,28 @@ fondoTransparente.addEventListener("change", function () {
     h2TextoInfMeme.style.alignItems = "";
   }
 });
+
+/* ----- Contorno ------*/
+
+const noOutline = document.getElementById("no-outline");
+const lightOutline = document.getElementById("light-outline");
+const darkOutline = document.getElementById("dark-outline");
+
+noOutline.addEventListener("click", function () {
+  h2TextoSupMeme.style.textShadow = "none";
+  h2TextoInfMeme.style.textShadow = "none";
+});
+
+lightOutline.addEventListener("click", function () {
+  h2TextoSupMeme.style.textShadow =
+    "2px 2px #FFF, -2px 2px #FFF, 2px -2px #FFF, -2px -2px #FFF";
+  h2TextoInfMeme.style.textShadow =
+    "2px 2px #FFF, -2px 2px #FFF, 2px -2px #FFF, -2px -2px #FFF";
+});
+
+darkOutline.addEventListener("click", function () {
+  h2TextoSupMeme.style.textShadow =
+    "2px 2px #000, -2px 2px #000, 2px -2px #000, -2px -2px #000";
+  h2TextoInfMeme.style.textShadow =
+    "2px 2px #000, -2px 2px #000, 2px -2px #000, -2px -2px #000";
+});
