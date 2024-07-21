@@ -338,3 +338,12 @@ espaciadoTexto.addEventListener("input", function () {
   h2TextoSupMeme.style.padding = espaciadoTexto.value + "px";
   h2TextoInfMeme.style.padding = espaciadoTexto.value + "px";
 });
+
+/* ----- Interlineado ------*/
+
+const interlineadoTexto = document.getElementById("interlineado-select");
+
+interlineadoTexto.addEventListener("input", function () {
+  h2TextoSupMeme.style.lineHeight = interlineadoTexto.value;
+  h2TextoInfMeme.style.lineHeight = interlineadoTexto.value;
+});
