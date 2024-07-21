@@ -329,3 +329,12 @@ darkOutline.addEventListener("click", function () {
   h2TextoInfMeme.style.textShadow =
     "2px 2px #000, -2px 2px #000, 2px -2px #000, -2px -2px #000";
 });
+
+/* ----- Espaciado ------*/
+
+const espaciadoTexto = document.getElementById("espaciado");
+
+espaciadoTexto.addEventListener("input", function () {
+  h2TextoSupMeme.style.padding = espaciadoTexto.value + "px";
+  h2TextoInfMeme.style.padding = espaciadoTexto.value + "px";
+});
