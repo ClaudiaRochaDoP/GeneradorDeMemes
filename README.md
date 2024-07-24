@@ -1,3 +1,7 @@
+# Claudia Rocha - Generador de Memes
+
+_URL:[https://elmejormeme.netlify.app)_
+
 # Generador de Memes
 
 Este es un proyecto donde podrás crear tu propio meme a tu gusto. Desarrollado en HTML, CSS y JavaScript. Permite a los usuarios cargar imágenes, editar y presonalizar brillo, opacidad, contraste, desenfoque, escala de grises, sepia, hue, saturación, negativo. También tendremos la opción de agregar texto y personalizar fuentes, colores, fondos. El resultado, un meme hecho por ti, no hay limites en la creatividad.
