@@ -105,7 +105,7 @@ h1 {
   align-items: center;
   align-content: center;
   width: 90%;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 .h2-texto-superior {
@@ -193,6 +193,7 @@ h1 {
   font-size: 14px;
   outline: 0;
   margin-top: 20px;
+  cursor: pointer;
 }
 .icono-descargar {
   padding-right: 5px;
@@ -678,13 +679,17 @@ textarea {
 
 /* MEDIA QUERIES */
 
-@media (min-width: 700px) and (max-width: 850px) {
+@media (min-width: 400px) and (max-width: 850px) {
   .contenedor-meme {
-    max-width: 80%;
-    height: 500px;
+    max-width: 450px;
+    height: 450px;
   }
   .contenedor-img {
     height: 420px;
+  }
+
+  .contenedor-editor {
+    margin-top: 20px;
   }
 
   /* ASIDE */
@@ -695,7 +700,6 @@ textarea {
     display: flex;
     flex-direction: row;
     overflow: none;
-
     width: 100vw;
   }
   .contenedor-editor {
@@ -704,18 +708,15 @@ textarea {
   }
 
   .contenedor-meme {
-    width: 600px;
-    height: 600px;
+    width: 550px;
+    height: 550px;
   }
   .contenedor-img {
     height: 420px;
   }
   .panel-aside {
-    display: block;
+    display: none;
     visibility: visible;
     width: 20%;
-  }
-  .boton-cerrar-panel {
-    display: none;
   }
 }

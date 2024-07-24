@@ -8,6 +8,8 @@ const seccionTexto = document.getElementById("seccion-texto");
 const seccionImagen = document.getElementById("seccion-imagen");
 const claseOculto = document.querySelector(".oculto");
 const headerTag = document.getElementsByTagName("header");
+const panelAside = document.getElementById("panel-aside");
+const botonCerrarPanel = document.getElementById("boton-cerrar-panel");
 
 /*---  Elementos Modo Oscuro y Modo Claro  ---*/
 
@@ -24,11 +26,19 @@ const botonModoClaro = document.getElementById("boton-modo-claro");
 botonTexto.addEventListener("click", function () {
   seccionTexto.style.display = "block";
   seccionImagen.style.display = "none";
+  panelAside.style.display = "block";
 });
 
 botonImagen.addEventListener("click", function () {
   seccionTexto.style.display = "none";
   seccionImagen.style.display = "block";
+  panelAside.style.display = "block";
+});
+
+/* ----  Funciones cerrar panel ------ */
+
+botonCerrarPanel.addEventListener("click", function () {
+  panelAside.style.display = "none";
 });
 
 /* ----  Funciones Modo Oscuro y Modo Claro  ------ */
@@ -347,3 +357,24 @@ interlineadoTexto.addEventListener("input", function () {
   h2TextoSupMeme.style.lineHeight = interlineadoTexto.value;
   h2TextoInfMeme.style.lineHeight = interlineadoTexto.value;
 });
+
+/* ----- Descarga Meme  ------*/
+
+const botonDescargar = document.getElementById("boton-descargar");
+
+// botonDescargar.onclick = () => {
+//   domtoimage.toBlob(contenedorMeme).then(function (blob) {
+//     saveAs(blob, "el-mejor-meme.png");
+//   });
+// };
+
+function descargarImagen() {
+  console.log("hizo click");
+  domtoimage
+    .toBlob(document.getElementById("contenedor-meme"))
+    .then(function (blob) {
+      window.saveAs(blob, "meme.png");
+    });
+}
+
+botonDescargar.addEventListener("click", descargarImagen);

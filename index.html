@@ -6,15 +6,16 @@
     <title>Generador de Memes</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-    <!-- dom to image -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    <!-- file saver -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+ integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+ crossorigin="anonymous"></script>
+        <!-- dom to image -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
         integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
         crossorigin="anonymous"></script>
 
-    <!-- file saver -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
-        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
-        crossorigin="anonymous"></script>
+    
   </head>
   <body class="modo-oscuro" id="body">
     <!-- INICIO HEADER -->
@@ -47,7 +48,7 @@
           <h2 id="h2-texto-inferior" class="h2-texto-inferior">BOTTOM TEXT</h2>
         </div>
         
-          <button class="boton-descargar">
+          <button id="boton-descargar" class="boton-descargar">
             <i class="fas fa-download icono-descargar"></i>Descargar meme
           </button>
         
@@ -56,9 +57,9 @@
        
       </div>
       
-      <aside id="" class="panel-aside">
+      <aside id="panel-aside" class="panel-aside hidden">
         <!-- BOTON CERRAR ASIDE -->
-       <button class="boton-cerrar-panel"><i class="fas fa-times"></i></button>
+       <button id="boton-cerrar-panel" class="boton-cerrar-panel"><i class="fas fa-times"></i></button>
        <section id="seccion-imagen" class="panel-editor">
          
          <h2 class="titulo-editor">IMAGEN</h2>
